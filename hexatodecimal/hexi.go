@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func hexDec(s rune) int {
 	if s >= 'A' && s <= 'F' {
 		return int(s - 'A' + 10)
@@ -29,9 +27,4 @@ func hexa2decimal(s string) int {
 
 	}
 	return totalValue
-}
-
-func main() {
-	fmt.Println(hexa2decimal("1A2B3C4D5E"))
-	fmt.Println(hexa2decimal("J"))
 }
