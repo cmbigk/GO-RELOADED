@@ -23,9 +23,7 @@ func hexa2decimal(s string) int {
 	powerofbase := 1
 
 	for i := len(s) - 1; i >= 0; i-- {
-		if hexDec(rune(s[i])) == -1 {
-			fmt.Println("invalid hexa")
-		}
+
 		totalValue = totalValue + hexDec(rune(s[i]))*powerofbase
 		powerofbase = powerofbase * 16
 
@@ -34,5 +32,6 @@ func hexa2decimal(s string) int {
 }
 
 func main() {
-	fmt.Println(hexa2decimal("-1A2B3C4D5E"))
+	fmt.Println(hexa2decimal("1A2B3C4D5E"))
+	fmt.Println(hexa2decimal("J"))
 }
