@@ -1,6 +1,6 @@
 package main
 
-func Up(s string) string {
+func toUpper(s string) string {
 	result := ""
 	for _, char := range s {
 		if char >= 'a' && char <= 'z' {
