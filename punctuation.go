@@ -1,15 +1,17 @@
 package main
 
-func PunPun(s string) string {
-	Punlay := ".,!?;:"
-	result := ""
+func IsPunctuation(char rune) bool {
 
-	for _, char := range Punlay {
-		isPunlay := false
-		if char == s {
-			isPunlay = true
-			break
+	Punlay := ".,!?;:"
+	for _, each := range Punlay {
+		if each == char {
+			return true
 		}
 	}
+	return false
+}
+
+func PunPun(s []string) []string {
+	!!!
 
 }
