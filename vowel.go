@@ -25,7 +25,7 @@ func ReplaceAWithAn(words []string) []string {
 
 func main() {
 	// Test cases
-	test1 := []string{"This", "is", "a", "apple"}
+	test1 := []string{"This", "is", "an", "apple"}
 	test2 := []string{"I", "have", "a", "house", "and", "a", "umbrella"}
 	test3 := []string{"He", "is", "a", "honest", "man"}
 	test4 := []string{"This", "is", "not", "an", "empty", "", "sentence"}
