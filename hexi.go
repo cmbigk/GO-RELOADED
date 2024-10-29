@@ -16,13 +16,13 @@ func hexDec(s rune) int {
 	return -1
 }
 
-func hexa2decimal(s string) int {
+func hexa2decimal(words string) int {
 	totalValue := 0
 	powerofbase := 1
 
-	for i := len(s) - 1; i >= 0; i-- {
+	for i := len(words) - 1; i >= 0; i-- {
 
-		totalValue = totalValue + hexDec(rune(s[i]))*powerofbase
+		totalValue = totalValue + hexDec(rune(words[i]))*powerofbase
 		powerofbase = powerofbase * 16
 
 	}

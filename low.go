@@ -1,8 +1,8 @@
 package main
 
-func toLower(s string) string {
+func toLower(words string) string {
 	result := ""
-	for _, char := range s {
+	for _, char := range words {
 		if char >= 'A' && char <= 'Z' {
 			char = char + 32
 		}

@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func IsVowelOrH(char rune) bool {
 	vowels := "aeiouAEIOUhH"
 	for _, each := range vowels {
@@ -23,6 +21,7 @@ func ReplaceAWithAn(words []string) []string {
 	return words
 }
 
+/*
 func main() {
 	// Test cases
 	test1 := []string{"This", "is", "an", "apple"}
@@ -42,3 +41,4 @@ func main() {
 	fmt.Println("Test 3:", result3)
 	fmt.Println("Test 4:", result4)
 }
+*/

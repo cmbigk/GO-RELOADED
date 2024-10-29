@@ -1,8 +1,8 @@
 package main
 
-func toUpper(s string) string {
+func toUpper(words string) string {
 	result := ""
-	for _, char := range s {
+	for _, char := range words {
 		if char >= 'a' && char <= 'z' {
 			char = char - 32
 		}

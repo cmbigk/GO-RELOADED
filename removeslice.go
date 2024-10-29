@@ -1,8 +1,8 @@
 package main
 
-func removeSlice(word []string) []string {
+func removeSlice(words []string) []string {
 	result := []string{}
-	for _, char := range word {
+	for _, char := range words {
 		if char != "" {
 			result = append(result, char)
 		}

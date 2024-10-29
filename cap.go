@@ -1,9 +1,9 @@
 package main
 
-func Capitalize(s string) string {
+func Capitalize(words string) string {
 	result := ""
 
-	for i, char := range s {
+	for i, char := range words {
 		if i == 0 {
 			result += toUpper(string(char))
 		} else {

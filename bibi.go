@@ -8,13 +8,13 @@ func biDec(c rune) int {
 	return -1
 }
 
-func binary2decimal(s string) int {
+func binary2decimal(words string) int {
 	totalValue := 0
 	powerofbase := 1
 
-	for i := len(s) - 1; i >= 0; i-- {
+	for i := len(words) - 1; i >= 0; i-- {
 
-		totalValue = totalValue + biDec(rune(s[i]))*powerofbase
+		totalValue = totalValue + biDec(rune(words[i]))*powerofbase
 		powerofbase = powerofbase * 2
 	}
 	return totalValue
