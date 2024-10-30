@@ -1,5 +1,7 @@
 package main
 
+import "strconv"
+
 func biDec(c rune) int {
 
 	if c == '0' || c == '1' {
@@ -8,7 +10,7 @@ func biDec(c rune) int {
 	return -1
 }
 
-func binary2decimal(words string) int {
+func binary2decimal(words string) string {
 	totalValue := 0
 	powerofbase := 1
 
@@ -17,5 +19,5 @@ func binary2decimal(words string) int {
 		totalValue = totalValue + biDec(rune(words[i]))*powerofbase
 		powerofbase = powerofbase * 2
 	}
-	return totalValue
+	return strconv.Itoa(int(totalValue))
 }

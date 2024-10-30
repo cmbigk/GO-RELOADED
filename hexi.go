@@ -1,5 +1,7 @@
 package main
 
+import "strconv"
+
 func hexDec(s rune) int {
 	if s >= 'A' && s <= 'F' {
 		return int(s - 'A' + 10)
@@ -16,7 +18,7 @@ func hexDec(s rune) int {
 	return -1
 }
 
-func hexa2decimal(words string) int {
+func hexa2decimal(words string) string {
 	totalValue := 0
 	powerofbase := 1
 
@@ -26,5 +28,5 @@ func hexa2decimal(words string) int {
 		powerofbase = powerofbase * 16
 
 	}
-	return totalValue
+	return strconv.Itoa(int(totalValue))
 }
