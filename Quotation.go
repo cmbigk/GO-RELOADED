@@ -1,19 +1,33 @@
 package main
 
-func QuoteHandler(words []string) []string {
-	var QuoteCount int
+import (
+	"strings"
+)
 
-	for i := 0; i < len(words); i++ {
-		if QuoteCount%2 == 0 && i < len(words)-1 && words[i] == "'" {
-			words[i+1] = "'" + words[i+1]
-			words[i] = ""
-			QuoteCount++
-		} else if QuoteCount%2 == 1 && i > 0 && words[i] == "'" {
-			words[i-1] = words[i-1] + "'"
-			words[i] = ""
-			QuoteCount++
+func QuoteHandling(input string) string {
+	var result string
+	inQuotes := false
+	var quotedContent string
+
+	for i := 0; i < len(input); i++ {
+		char := input[i]
+		if char == '\'' {
+			if inQuotes {
+				inQuotes = false
+				result += "'" + strings.TrimSpace(quotedContent) + "'"
+				quotedContent = ""
+			} else {
+				inQuotes = true
+			}
+			continue
+		}
+
+		if inQuotes {
+			quotedContent += string(char)
+
+		} else {
+			result += string(char)
 		}
 	}
-
-	return removeSlice(words)
+	return strings.TrimSpace(result)
 }
