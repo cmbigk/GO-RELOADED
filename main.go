@@ -13,7 +13,7 @@ func main() {
 	fileB, err := os.ReadFile(os.Args[1])
 	IsErrNo(err)
 
-	ModifiedText := myLab(string(fileB))
+	ModifiedText := experiment(string(fileB))
 
 	os.WriteFile(os.Args[2], []byte(ModifiedText), 0644)
 

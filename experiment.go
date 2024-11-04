@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func myLab(sentence string) string {
+func experiment(sentence string) string {
 	words := strings.Fields(sentence)
 	if len(words) > 0 {
 		words[0] = Capitalize(words[0])
