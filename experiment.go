@@ -40,21 +40,21 @@ func experiment(sentence string) string {
 		case "(low,":
 			if i < len(words)-1 {
 				num = ExtractNumber(words[i+1])
-				NumMod(num, i, words, toLower)
+				NumModify(num, i, words, toLower)
 				words[i] = ""
 				words[i+1] = ""
 			}
 		case "(up,":
 			if i < len(words)-1 {
 				num = ExtractNumber(words[i+1])
-				NumMod(num, i, words, toUpper)
+				NumModify(num, i, words, toUpper)
 				words[i] = ""
 				words[i+1] = ""
 			}
 		case "(cap,":
 			if i < len(words)-1 {
 				num = ExtractNumber(words[i+1])
-				NumMod(num, i, words, Capitalize)
+				NumModify(num, i, words, Capitalize)
 				words[i] = ""
 				words[i+1] = ""
 			}

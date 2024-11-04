@@ -4,6 +4,7 @@ import "strconv"
 
 func biDec(c rune) int {
 
+	// Check if character is '0' or '1'
 	if c == '0' || c == '1' {
 		return int(c - '0')
 	}
