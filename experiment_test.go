@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func experimentLabrat(t *testing.T) {
+func TestExperimentLabrat(t *testing.T) {
 	testCases := []struct {
 		input string
 		want  string
@@ -14,7 +14,7 @@ func experimentLabrat(t *testing.T) {
 		want:  "It has been 2 years",
 	}, {
 		input: "Ready, set, go (up) !",
-		want:  "Ready, set, GO !",
+		want:  "Ready, set, GO!",
 	}, {
 		input: "I should stop SHOUTING (low)",
 		want:  "I should stop shouting",
