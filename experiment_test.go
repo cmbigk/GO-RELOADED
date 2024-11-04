@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestExperimentLabrat(t *testing.T) {
+func TestExperiment(t *testing.T) {
 	testCases := []struct {
 		input string
 		want  string
